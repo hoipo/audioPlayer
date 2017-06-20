@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>audio sound test page</title>
+</head>
+
+<body>
+    <button type="button" onclick="playsound1()">play sound1</button>
+    <button type="button" onclick="playsound2()">play sound2</button><br>
+    <button type="button" onclick="pausesound1()">pause sound1</button>
+    <button type="button" onclick="pausesound2()">pause sound2</button><br>
+    <script src="./audioPlayer.js"></script>
+    <script>
+        var sound1 = new AudioPlayer({
+            path: "./timeCounting.mp3",
+            loop: true
+        })
+        var sound2 = new AudioPlayer({
+            path: "./lotterying.mp3",
+        })
+
+        function playsound1() {
+            sound1.play()
+        }
+
+        function pausesound1() {
+            sound1.pause()
+        }
+
+        function playsound2() {
+            sound2.play()
+        }
+
+        function pausesound2() {
+            sound2.pause()
+        }
+    </script>
+</body>
+
+</html>
